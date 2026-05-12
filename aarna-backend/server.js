@@ -181,10 +181,7 @@ const signToken = (userId) => jwt.sign({ sub: userId }, JWT_SECRET, { expiresIn:
 // ─── MIDDLEWARE ───────────────────────────────────────────────────────────────
 const app = express();
 
-app.use(cors({ 
-  origin: "https://aarna-project-codealpha1.vercel.app",
-  credentials: true 
-}));
+app.use(cors({ origin: "*", credentials: true }));
 app.use(express.json());
 app.use(morgan("dev"));
 
