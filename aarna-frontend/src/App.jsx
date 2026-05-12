@@ -99,8 +99,7 @@ const GlobalStyle = () => (
 );
 
 // ─── API SERVICE ─────────────────────────────────────────────────────────────
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:4000/api";
-
+const API_BASE = "https://aarna-backend.onrender.com/api";
 const api = {
   _token: () => localStorage.getItem("aarna_token"),
   _headers: () => ({
